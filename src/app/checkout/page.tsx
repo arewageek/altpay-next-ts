@@ -1,4 +1,9 @@
 
+import CountriesList from '@/components/bits/CountriesList'
+import { Button } from '@/components/ui/button'
+import { Input } from '@/components/ui/input'
+import { Label } from '@/components/ui/label'
+import Link from 'next/link'
 import React from 'react'
 
 const CheckoutPage = () => {
@@ -6,12 +11,11 @@ const CheckoutPage = () => {
         <div className='w-full h-screen overflow-x-auto bg-white'>
             <div className=' border-b-2'>
                 <div className='w-full flex items-center justify-center lg:justify-start lg:w-[67%] m-auto'>
-                    <img src=".." alt=".." className='h-[70pt] w-[70pt] border-2' />
+                    <img src="https://d8rus.com/cdn/shop/files/SM-Image_jpg.webp?v=1688200544&width=110" alt=".." className='h-[70pt] w-[70pt] border-2' />
                 </div>
             </div>
             <div className='flex justify-end'>
                 <form action="" className='flex flex-col-reverse lg:flex-row justify-end w-full lg:w-[83.5%] divide-x-2'>
-
                     <div className='lg:w-1/2 w-full pb-10'>
                         <div className='flex flex-col gap-y-10 w-full mt-8 lg:pr-10 px-10 lg:px-0'>
                             <div className='flex flex-col gap-y-2'>
@@ -19,10 +23,10 @@ const CheckoutPage = () => {
                                     Contact
                                 </h3>
                                 <div className='relative group transition-all p-0'>
-                                    <input type='text' required className='border-2 rounded w-full border-black/30 px-3 pt-3.5 pb-1 peer' />
-                                    <label className='absolute left-3 top-2 group-focus-within:top-0 group-focus-within:left-2.5 group-focus-within:text-[9pt]  peer-valid:top-0 peer-valid:left-2.5 peer-valid:text-[9pt] transition-all font-medium py-1'>
+                                    <Input type='text' required className='rounded w-full border-black/30 px-3 pt-3.5 pb-1 peer' />
+                                    <Label className='absolute left-3 top-2 group-focus-within:top-0 group-focus-within:left-2.5 group-focus-within:text-[9pt]  peer-valid:top-0 peer-valid:left-2.5 peer-valid:text-[9pt] transition-all font-medium py-1'>
                                         Email
-                                    </label>
+                                    </Label>
                                 </div>
 
                             </div>
@@ -32,66 +36,60 @@ const CheckoutPage = () => {
                                 <h3 className='font-medium text-xl'>
                                     Delivery
                                 </h3>
-                                <div className='relative group transition-all p-0'>
-                                    <select className='border-2 rounded w-full border-black/30 px-3 pt-3.5 pb-1 peer bg-white'>
-                                        <option value="">Opps</option>
-                                    </select>
-                                    <label className='absolute left-3 top-2 group-focus-within:top-0 group-focus-within:left-2.5 group-focus-within:text-[9pt]  peer-valid:top-0 peer-valid:left-2.5 peer-valid:text-[9pt] transition-all font-medium py-1'>
-                                        Country/Region
-                                    </label>
-                                </div>
+
+                                <CountriesList />
 
                                 <div className='flex gap-3 w-full'>
                                     <div className='relative group transition-all p-0 w-1/2'>
-                                        <input type='text' required className='border-2 rounded w-full border-black/30 px-3 pt-3.5 pb-1 peer' />
-                                        <label className='absolute left-3 top-2 group-focus-within:top-0 group-focus-within:left-2.5 group-focus-within:text-[9pt]  peer-valid:top-0 peer-valid:left-2.5 peer-valid:text-[9pt] transition-all font-medium py-1'>
+                                        <Input type='text' required className='rounded w-full border-black/30 px-3 pt-3.5 pb-1 peer' />
+                                        <Label className='absolute left-3 top-2 group-focus-within:top-0 group-focus-within:left-2.5 group-focus-within:text-[9pt]  peer-valid:top-0 peer-valid:left-2.5 peer-valid:text-[9pt] transition-all font-medium py-1'>
                                             First Name
-                                        </label>
+                                        </Label>
                                     </div>
 
                                     <div className='relative group transition-all p-0 w-1/2'>
-                                        <input type='text' required className='border-2 rounded w-full border-black/30 px-3 pt-3.5 pb-1 peer' />
-                                        <label className='absolute left-3 top-2 group-focus-within:top-0 group-focus-within:left-2.5 group-focus-within:text-[9pt]  peer-valid:top-0 peer-valid:left-2.5 peer-valid:text-[9pt] transition-all font-medium py-1'>
+                                        <Input type='text' required className='rounded w-full border-black/30 px-3 pt-3.5 pb-1 peer' />
+                                        <Label className='absolute left-3 top-2 group-focus-within:top-0 group-focus-within:left-2.5 group-focus-within:text-[9pt]  peer-valid:top-0 peer-valid:left-2.5 peer-valid:text-[9pt] transition-all font-medium py-1'>
                                             Last Name
-                                        </label>
+                                        </Label>
                                     </div>
                                 </div>
 
                                 <div className='relative group transition-all p-0'>
-                                    <input type='text' required className='border-2 rounded w-full border-black/30 px-3 pt-3.5 pb-1 peer' />
-                                    <label className='absolute left-3 top-2 group-focus-within:top-0 group-focus-within:left-2.5 group-focus-within:text-[9pt]  peer-valid:top-0 peer-valid:left-2.5 peer-valid:text-[9pt] transition-all font-medium py-1'>
+                                    <Input type='text' required className='rounded w-full border-black/30 px-3 pt-3.5 pb-1 peer' />
+                                    <Label className='absolute left-3 top-2 group-focus-within:top-0 group-focus-within:left-2.5 group-focus-within:text-[9pt]  peer-valid:top-0 peer-valid:left-2.5 peer-valid:text-[9pt] transition-all font-medium py-1'>
                                         Address
-                                    </label>
+                                    </Label>
                                 </div>
 
                                 <div className='flex gap-3 w-full'>
                                     <div className='relative group transition-all p-0 w-1/3'>
-                                        <input type='text' required className='border-2 rounded w-full border-black/30 px-3 pt-3.5 pb-1 peer' />
-                                        <label className='absolute left-3 top-2 group-focus-within:top-0 group-focus-within:left-2.5 group-focus-within:text-[9pt]  peer-valid:top-0 peer-valid:left-2.5 peer-valid:text-[9pt] transition-all font-medium py-1'>
+                                        <Input type='text' required className='rounded w-full border-black/30 px-3 pt-3.5 pb-1 peer' />
+                                        <Label className='absolute left-3 top-2 group-focus-within:top-0 group-focus-within:left-2.5 group-focus-within:text-[9pt]  peer-valid:top-0 peer-valid:left-2.5 peer-valid:text-[9pt] transition-all font-medium py-1'>
                                             City
-                                        </label>
+                                        </Label>
                                     </div>
 
                                     <div className='relative group transition-all p-0 w-1/3'>
-                                        <input type='text' required className='border-2 rounded w-full border-black/30 px-3 pt-3.5 pb-1 peer' />
-                                        <label className='absolute left-3 top-2 group-focus-within:top-0 group-focus-within:left-2.5 group-focus-within:text-[9pt]  peer-valid:top-0 peer-valid:left-2.5 peer-valid:text-[9pt] transition-all font-medium py-1'>
+                                        <Input type='text' required className='rounded w-full border-black/30 px-3 pt-3.5 pb-1 peer' />
+                                        <Label className='absolute left-3 top-2 group-focus-within:top-0 group-focus-within:left-2.5 group-focus-within:text-[9pt]  peer-valid:top-0 peer-valid:left-2.5 peer-valid:text-[9pt] transition-all font-medium py-1'>
                                             State
-                                        </label>
+                                        </Label>
                                     </div>
 
                                     <div className='relative group transition-all p-0 w-1/3'>
-                                        <input type='text' required className='border-2 rounded w-full border-black/30 px-3 pt-3.5 pb-1 peer' />
-                                        <label className='absolute left-3 top-2 group-focus-within:top-0 group-focus-within:left-2.5 group-focus-within:text-[9pt]  peer-valid:top-0 peer-valid:left-2.5 peer-valid:text-[9pt] transition-all font-medium py-1'>
+                                        <Input type='text' required className='rounded w-full border-black/30 px-3 pt-3.5 pb-1 peer' />
+                                        <Label className='absolute left-3 top-2 group-focus-within:top-0 group-focus-within:left-2.5 group-focus-within:text-[9pt]  peer-valid:top-0 peer-valid:left-2.5 peer-valid:text-[9pt] transition-all font-medium py-1'>
                                             Postal Code
-                                        </label>
+                                        </Label>
                                     </div>
                                 </div>
 
                                 <div className='relative group transition-all p-0'>
-                                    <input type='text' className='border-2 rounded w-full border-black/30 px-3 pt-3.5 pb-1 peer' />
-                                    <label className='absolute left-3 top-2 group-focus-within:top-0 group-focus-within:left-2.5 group-focus-within:text-[9pt]  peer-valid:top-0 peer-valid:left-2.5 peer-valid:text-[9pt] transition-all font-medium py-1'>
+                                    <Input type='text' className='rounded w-full border-black/30 px-3 pt-3.5 pb-1 peer' />
+                                    <Label className='absolute left-3 top-2 group-focus-within:top-0 group-focus-within:left-2.5 group-focus-within:text-[9pt]  peer-valid:top-0 peer-valid:left-2.5 peer-valid:text-[9pt] transition-all font-medium py-1'>
                                         Phone Number (Optional)
-                                    </label>
+                                    </Label>
                                 </div>
 
                             </div>
@@ -113,13 +111,16 @@ const CheckoutPage = () => {
                                     Payment
                                 </h3>
                                 <div className='relative group transition-all p-0'>
-                                    <button className='border-0 bg-primary-base hover:bg-primary-fade w-full p-3 rounded text-white font-medium transition'>
+                                    <Button className='border-0 bg-primary-base hover:bg-primary-fade w-full p-3 rounded text-white font-medium transition'>
                                         Proceed to Payment
-                                    </button>
+                                    </Button>
                                 </div>
 
                             </div>
 
+                            <div className='pb-0'>
+                                <Link href="#">Terms of service</Link>
+                            </div>
                         </div>
                     </div>
                     <div className='bg-gray-100 p-4 lg:p-10 w-full lg:w-1/2 h-full lg:min-h-screen'>
@@ -137,10 +138,10 @@ const CheckoutPage = () => {
                             </div>
 
                             <div className='flex'>
-                                <input type='text' className='border p-2 w-full' placeholder='Discount Code' />
-                                <button className='bg-primary-base hover:bg-primary-fade transition font-medium px-10 rounded-r text-white'>
+                                <Input type='text' className='border p-2 w-full' placeholder='Discount Code' />
+                                <Button type='button' className='bg-primary-base hover:bg-primary-fade rounded-l-none'>
                                     Apply
-                                </button>
+                                </Button>
                             </div>
 
                             <div className='flex flex-wrap'>
