@@ -1,17 +1,18 @@
+import { storesList } from '@/actions/project.action'
 import EachProjectCard from '@/components/bits/EachProjectCard'
 import SideNav from '@/components/layouts/SideNav'
 import React from 'react'
 
-const ChannelsPage = () => {
+const ChannelsPage = async () => {
+    const stores = await storesList()
+
+    console.log({ stores })
+
     return (
-        <main className='w-full h-full px-0 lg:px-10 bg-gray-100 flex flex-col md:flex-row py-20'>
-            <SideNav />
-            <div className='w-full rounded-3xl bg-white p-10 '>
-                <div className='grid grid-cols-1 md:grid-cols-4'>
-                    {[...Array(10)].map((element, index) => <EachProjectCard key={index} />)}
-                </div>
-            </div>
-        </main>
+        <div className='grid grid-cols-1 md:grid-cols-4'>
+            {stores?.map((store) => <EachProjectCard key={store.id} name={store.name} url={store.url} id={store.id} />)}
+            <EachProjectCard type="create" />
+        </div>
     )
 }
 

@@ -9,7 +9,7 @@ const Channel = ({ params }: { params: { id: string } }) => {
     return (
         <div>
             <div className='flex text-xl font-bold items-center gap-5'>
-                Application Id: #0000000000000
+                Application Id: #{params.id}
                 <Button className='py-1' variant={'secondary'}>
                     <Copy size={20} />
                 </Button>
