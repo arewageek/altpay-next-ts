@@ -1,4 +1,4 @@
-import { storesList } from '@/actions/project.action'
+import { storesList } from '@/actions/channel.action'
 import EachProjectCard from '@/components/bits/EachProjectCard'
 import SideNav from '@/components/layouts/SideNav'
 import React from 'react'
@@ -10,7 +10,7 @@ const ChannelsPage = async () => {
 
     return (
         <div className='grid grid-cols-1 md:grid-cols-4'>
-            {stores?.map((store) => <EachProjectCard key={store.id} name={store.name} url={store.url} id={store.id} />)}
+            {stores?.map((store) => <EachProjectCard key={store.id} name={store.name} url={store.url} id={store.storeId} />)}
             <EachProjectCard type="create" />
         </div>
     )

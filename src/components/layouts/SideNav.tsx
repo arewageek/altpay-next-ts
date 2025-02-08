@@ -3,7 +3,7 @@ import React from 'react'
 
 const SideNav = () => {
     const links = [
-        { label: "Channels", path: "/" },
+        { label: "Channels", path: "/admin/channels" },
         { label: "Profile", path: "/" },
         { label: "Settings", path: "/" }
     ]

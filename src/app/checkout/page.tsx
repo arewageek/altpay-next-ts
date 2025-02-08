@@ -28,7 +28,6 @@ const CheckoutPage = () => {
                                         Email
                                     </Label>
                                 </div>
-
                             </div>
 
 
