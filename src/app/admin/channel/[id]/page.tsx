@@ -1,5 +1,6 @@
 import CopyToClipboard from '@/components/bits/CopyToClipboard'
 import DeleteStore from '@/components/bits/DeleteStore'
+import { UpdateChannelData } from '@/components/forms/UpdateChannelData'
 import UpdateStoreDataForm from '@/components/forms/UpdateStoreDataForm'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardDescription, CardTitle } from '@/components/ui/card'
@@ -14,45 +15,7 @@ const Channel = ({ params }: { params: { id: string } }) => {
                 <CopyToClipboard text={params.id} />
             </div>
 
-            <Card className='w-full mt-10'>
-
-                <CardDescription className='p-3'>
-                    Generate Access Token For Application
-                </CardDescription>
-
-                <div className='flex flex-col lg:flex-row'>
-                    <div className='w-full lg:w-1/2 p-3 min-h-full'>
-                        <Card className='py-5 h-full'>
-                            <CardTitle className='text-xl px-6'>
-                                Shopify Integration
-                            </CardTitle>
-                            <CardContent className='py-10'>
-                                <Input placeholder='Shopify Access Token' />
-                            </CardContent>
-                        </Card>
-                    </div>
-
-                    <div className='w-full lg:w-1/2 p-3'>
-                        <Card className='py-5'>
-                            <CardTitle className='text-xl px-6 min-sh-full'>
-                                Square Integration
-                            </CardTitle>
-                            <CardContent className='py-10 grid gap-3'>
-                                <Input placeholder='Shopify Access Token' />
-                                <Input placeholder='Shopify Ac' />
-                                <Input placeholder='Shopify Access Token' />
-                            </CardContent>
-                        </Card>
-                    </div>
-                </div>
-
-                <div className='p-3'>
-                    <Button>
-                        Validate Token
-                    </Button>
-                </div>
-            </Card>
-
+            <UpdateChannelData channel={params.id} />
 
             <Card className='w-full mt-10'>
 

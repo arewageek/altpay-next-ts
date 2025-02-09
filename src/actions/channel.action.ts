@@ -65,15 +65,15 @@ export async function getInitialStoreData({ storeId }: { storeId: string }) {
 /**
  * Update store information
  *
- * @param Store data
- * @param string storeId
- * @returns Promise<string>
+ * @param {string} token
+ * @param {string} storeId
+ * @returns {Promise<string>}
  */
-export async function updateStoreData({
-  data,
+export async function updateChannelData({
+  token,
   storeId,
 }: {
-  data: Store;
+  token: string;
   storeId: string;
 }): Promise<"invalidStore" | "success" | "unknownError"> {
   const storeFound = await prisma.store.findUnique({ where: { storeId } });
@@ -83,7 +83,7 @@ export async function updateStoreData({
   try {
     await prisma.store.update({
       where: { storeId },
-      data: data,
+      data: { token },
     });
 
     return "success";
