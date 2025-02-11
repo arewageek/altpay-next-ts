@@ -8,21 +8,25 @@ generator client {
 }
 
 model User {
-  id            String          @id @default(cuid())
-  name          String?
-  email         String          @unique
-  
+  id    String  @id @default(cuid())
+  name  String?
+  email String  @unique
+
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 }
 
 model Store {
-  id              String  @id @unique @default(uuid())
-  storeId         String  @unique
-  name            String
-  url             String?
-  token           String?
-  country         String?
-  shopifyCurrency String?
-  squareCurrency  String?
+  id                 String  @id @unique @default(uuid())
+  storeId            String  @unique
+  name               String
+  url                String?
+  shopifyAccessToken String?
+  squareAccessToken  String?
+  squareLocationId   String?
+  squareSecret       String?
+  token              String?
+  country            String?
+  shopifyCurrency    String?
+  squareCurrency     String?
 }
