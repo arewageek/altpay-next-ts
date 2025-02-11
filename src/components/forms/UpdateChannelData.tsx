@@ -5,8 +5,7 @@ import { Card, CardContent, CardDescription, CardTitle } from '@/components/ui/c
 import { Input } from '../ui/input'
 import { Button } from '../ui/button'
 import { jwtEncode } from '@/lib/jwt'
-import { updateChannelData } from '@/actions/channel.action'
-import { toast, useToast } from '../ui/use-toast'
+import { useToast } from '../ui/use-toast'
 
 export const UpdateChannelData = ({ channel }: { channel: string }) => {
 
@@ -20,13 +19,11 @@ export const UpdateChannelData = ({ channel }: { channel: string }) => {
     const handleChannelUpdate = async (event: SyntheticEvent) => {
         event.preventDefault()
 
-        const jwtToken = await jwtEncode({
-            shopify: { access_token: shopifyToken },
-            square: {
-                access_token: squareAccessToken,
-                application_id: squareAppId,
-                location_id: squareLocationId,
-            }
+        const jwtToken = jwtEncode({
+            shopify_access_token: shopifyToken,
+            square_access_token: squareAccessToken,
+            square_application_id: squareAppId,
+            square_location_id: squareLocationId,
         })
 
         console.log({ jwtToken })

@@ -1,14 +1,10 @@
 import jwt from "jsonwebtoken";
 
 interface IProp {
-  shopify: {
-    access_token: string;
-  };
-  square: {
-    application_id: string;
-    access_token: string;
-    location_id: string;
-  };
+  shopify_access_token: string;
+  square_application_id: string;
+  square_access_token: string;
+  square_location_id: string;
 }
 
 const secret = process.env.JWT_SECRET || "arewageek";
@@ -24,7 +20,8 @@ if (!secret || typeof secret !== "string") {
  * @returns {string}
  */
 export const jwtEncode = (data: IProp): string => {
-  return jwt.sign(data, secret);
+  const token = jwt.sign(data, "secret");
+  return token;
 };
 
 /**
